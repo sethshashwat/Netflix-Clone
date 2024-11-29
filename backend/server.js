@@ -12,4 +12,4 @@ mongoose.connect("mongodb+srv://shashwatseth:Captain123@netflix-clone.tebb4.mong
 
 app.use("/api/user", userRoutes);
 
-app.listen(4000, console.log("Server Started"))
+app.listen(process.env.PORT || 4000, console.log("Server Started"))
