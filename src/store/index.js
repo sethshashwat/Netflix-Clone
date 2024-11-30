@@ -55,12 +55,12 @@ const createArrayFromRawData = (results, moviesArray, genres) => {
 }
 
 export const getUserLikedMovies = createAsyncThunk("netflix/getLiked", async (email) => {
-    const { data: { movies } } = await axios.get(`http://localhost:4000/api/user/liked/${email}`);
+    const { data: { movies } } = await axios.get(`https://netflix-clone-backend-7y6p.onrender.com/api/user/liked/${email}`);
     return movies;
 });
 
 export const removeUserLikedMovies = createAsyncThunk("netflix/removeLiked", async ({ email, movieID }) => {
-    const { data: { movies } } = await axios.put(`http://localhost:4000/api/user/delete`, { email, movieID });
+    const { data: { movies } } = await axios.put(`https://netflix-clone-backend-7y6p.onrender.com/api/user/delete`, { email, movieID });
     return movies;
 });
 
