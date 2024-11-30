@@ -25,7 +25,7 @@ const Card = ({ index, movie, isLiked = false }) => {
 
   const addToList = async () => {
     try {
-      await axios.post("http://localhost:4000/api/user/add", {
+      await axios.post("https://netflix-clone-backend-7y6p.onrender.com/api/user/add", {
         email,
         data: movie
       });
